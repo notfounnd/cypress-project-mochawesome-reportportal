@@ -1,0 +1,35 @@
+{
+  "lang": "en-US",
+  "min-len": 10,
+  "max-len": 80,
+  "showInvalidHeader": true,
+  "types": {
+    "test": "Use for add a new test feature.",
+    "fix": "Use for fix currently test feature.",
+    "docs": "Use for add documentation changes.",
+    "refactor": "Use for code tweaks and improvements (architecture, performance, clean code, etc).",
+    "build": "Use for change build configurations or continuous integration scripts.",
+    "coffe": "Take a coffe guy!",
+    "feat": false,
+    "style": false,
+    "chore": false,
+    "perf": false,
+    "ci": false,
+    "temp": false
+  },
+  "scopeDescriptions": [
+    "Optional, can be anything specifying the scope of the commit change.",
+    "For example package, test context, configuration, commands, component, pages, etc.",
+    "",
+    "Examples:",
+    "test(foo): add new test flow",
+    "fix(bar): update element mapping"
+  ],
+  "subjectDescriptions": [
+    "Brief summary of the change in present tense. Not capitalized. No period at the end.",
+    "",
+    "Examples:",
+    "fix: setup environments variable",
+    "refactor: update billing elements map"
+  ]
+}
