@@ -9,6 +9,8 @@ describe('Execute debug methods', { tags: '@debug' }, () => {
     Object.entries(Cypress.config()).forEach(entry => {
       cy.log(entry[0] + ': ' + entry[1])
     })
+    console.log(Cypress.config())
+    console.log(Cypress.config().reporterOptions)
   })
 
   it('Should read Cypress.env()', () => {
