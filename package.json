@@ -10,51 +10,10 @@
     "e2e"
   ],
   "scripts": {
-    "open:debug": "yarn cypress open --env argExample=argValue --config-file ./cypress/environments/debug.json",
-    "run:debug": "yarn report:clean && yarn cypress run --env argExample=argValue,grepTags=@debug --config-file ./cypress/environments/debug.json",
-    "open:example": "yarn cypress open --env argExample=argValue --config-file ./cypress/environments/debug.json",
-    "run:example": "yarn report:clean && yarn cypress run --env argExample=argValue,grepTags=@example --config-file ./cypress/environments/debug.json",
-    "report:clean": "rm -R -f ./cypress/report && rm -R -f ./cypress/screenshots",
-    "report:create": "yarn report:merge && yarn report:generate",
-    "report:merge": "yarn mochawesome-merge ./cypress/report/mocha/*.json -o ./cypress/report/final/report.json",
-    "report:generate": "yarn marge ./cypress/report/final/report.json -o ./cypress/report/final/report -i true",
-    "linter:check": "standard -v | snazzy",
-    "linter:fix": "standard -v --fix | snazzy",
-    "prepare": "husky install"
-  },
-  "standard": {
-    "globals": [
-      "cy",
-      "cypress",
-      "Cypress",
-      "it",
-      "describe",
-      "before",
-      "beforeEach",
-      "after",
-      "afterEach",
-      "expect",
-      "assert",
-      "context",
-      "localStorage"
-    ]
+    "open:cypress": "yarn cypress open"
   },
   "dependencies": {
-    "@reportportal/agent-js-cypress": "^5.0.2",
-    "cypress": "^9.2.0",
-    "cypress-grep": "^2.12.2",
-    "cypress-multi-reporters": "^1.5.0",
-    "cypress-xpath": "^1.6.2",
-    "deepmerge": "^4.2.2",
-    "mochawesome": "^7.0.1",
-    "mochawesome-merge": "^4.2.1",
-    "mochawesome-report-generator": "^6.0.1",
-    "pure-gen": "^2.0.1"
-  },
-  "devDependencies": {
-    "git-commit-msg-linter": "^3.2.8",
-    "husky": "^7.0.4",
-    "snazzy": "^9.0.0",
-    "standard": "^16.0.4"
+    "cypress": "9.7.0",
+    "cypress-plugin-api": "^1.2.0"
   }
 }

@@ -1,5 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-echo "[HUSKY] Hmmm... You shall not pass!"
-npm run linter:check

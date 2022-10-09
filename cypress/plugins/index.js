@@ -1,23 +1,16 @@
 /// <reference types="cypress" />
+// ***********************************************************
+// This example plugins/index.js can be used to load plugins
+//
+// You can change the location of this file or turn off loading
+// the plugins file with the 'pluginsFile' configuration option.
+//
+// You can read more here:
+// https://on.cypress.io/plugins-guide
+// ***********************************************************
 
-const deepmerge = require('deepmerge')
-const path = require('path')
-const registerReportPortalPlugin = require('@reportportal/agent-js-cypress/lib/plugin')
-
-// merge environment file with globals configs in cypress.json
-// https://github.com/bahmutov/config-extends-example/blob/master/cypress/plugins/index.js
-function loadConfig (filename) {
-  const configJson = require(filename)
-  if (configJson.extends) {
-    const baseConfigFilename = path.join(
-      path.dirname(filename), configJson.extends)
-    const baseConfig = loadConfig(baseConfigFilename)
-    console.log('merging %s with %s', baseConfigFilename, filename)
-    return deepmerge(baseConfig, configJson)
-  } else {
-    return configJson
-  }
-}
+// This function is called when a project is opened or re-opened (e.g. due to
+// the project's config changing)
 
 /**
  * @type {Cypress.PluginConfig}
@@ -26,11 +19,4 @@ function loadConfig (filename) {
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-  require('cypress-grep/src/plugin')(config)
-
-  // setup report portal plugin
-  // https://github.com/reportportal/agent-js-cypress
-  registerReportPortalPlugin(on, config)
-
-  return loadConfig(config.configFile)
 }

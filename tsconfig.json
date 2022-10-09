@@ -1,8 +1,0 @@
-{
-    "compilerOptions": {
-        "allowJs": true,
-        "noEmit": true,
-        "types": ["cypress"]
-    },
-    "include": ["**/*.*"]
-}
