@@ -14,6 +14,6 @@
   },
   "dependencies": {
     "cypress": "9.7.0",
-    "cypress-plugin-api": "^1.2.0"
+    "cypress-plugin-api": "^1.2.1"
   }
 }
